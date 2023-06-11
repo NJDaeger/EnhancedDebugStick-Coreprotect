@@ -76,6 +76,8 @@
                 </includes>
             </resource>
         </resources>
+
+        <finalName>EnhancedDebugStick-CoreProtect-v${project.version}</finalName>
     </build>
 
 </project>
