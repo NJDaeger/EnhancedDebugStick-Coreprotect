@@ -7,7 +7,7 @@
     <groupId>com.njdaeger</groupId>
     <artifactId>eds-coreprotect</artifactId>
     <version>1.1</version>
-    <packaging>pom</packaging>
+    <packaging>jar</packaging>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
@@ -15,6 +15,10 @@
     </properties>
 
     <repositories>
+		<repository>
+            <id>spigot-repo</id>
+            <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
+        </repository>
         <repository>
             <id>coreprotect</id>
             <url>https://maven.playpro.com/</url>
@@ -72,50 +76,6 @@
                 </includes>
             </resource>
         </resources>
-
-<!--        <plugins>-->
-<!--            <plugin>-->
-<!--                <artifactId>maven-assembly-plugin</artifactId>-->
-<!--                <executions>-->
-<!--                    <execution>-->
-<!--                        <phase>package</phase>-->
-<!--                        <goals>-->
-<!--                            <goal>single</goal>-->
-<!--                        </goals>-->
-<!--                    </execution>-->
-<!--                </executions>-->
-<!--                <configuration>-->
-<!--                    <descriptorRefs>-->
-<!--                        <descriptorRef>jar-with-dependencies</descriptorRef>-->
-<!--                    </descriptorRefs>-->
-<!--                    <finalName>EnhancedDebugStick-CoreProtect-${project.version}</finalName>-->
-<!--                    <outputDirectory>${project.parent.basedir}/jars</outputDirectory>-->
-<!--                    <appendAssemblyId>false</appendAssemblyId>-->
-<!--                </configuration>-->
-<!--            </plugin>-->
-<!--            <plugin>-->
-<!--                <groupId>org.apache.maven.plugins</groupId>-->
-<!--                <artifactId>maven-shade-plugin</artifactId>-->
-<!--                <version>3.1.1</version>-->
-<!--                <executions>-->
-<!--                    <execution>-->
-<!--                        <phase>package</phase>-->
-<!--                        <goals>-->
-<!--                            <goal>shade</goal>-->
-<!--                        </goals>-->
-<!--                    </execution>-->
-<!--                </executions>-->
-<!--                <configuration>-->
-<!--                    <relocations>-->
-<!--                        <relocation>-->
-<!--                            <pattern>com.njdaeger.pdk</pattern>-->
-<!--                            <shadedPattern>com.njdaeger.enhanceddebugstick.libs.pdk</shadedPattern>-->
-<!--                        </relocation>-->
-<!--                    </relocations>-->
-<!--                </configuration>-->
-<!--            </plugin>-->
-<!--        </plugins>-->
-
     </build>
 
 </project>
